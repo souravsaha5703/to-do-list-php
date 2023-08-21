@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,#edf6f9,#cbf3f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.name{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.name h1{
+    color: #ff9f1c;
+    font-size: 6rem;
+    font-weight: 600;
+}
+.name h4{
+    color: #ffbf69;
+    font-size: 3rem;
+}
+.name p{
+    color: #000;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.buttons #login{
+    width: 200px;
+    height: 60px;
+    border: 3px solid #2ec4b6;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+    color: #2ec4b6;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease-in;
+}
+.buttons #signup{
+    width: 200px;
+    height: 60px;
+    background-color: #ff9f1c;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+.buttons #login:hover{
+    background-color: #2ec4b6;
+    color: #fff;
+}
+.buttons #signup:hover{
+    background-color: #ff7b00;
+}

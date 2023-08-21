@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,#edf6f9,#cbf3f0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    width: 600px;
+    height: 700px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px #cbf3f0;
+}
+.form h1{
+    margin-top: 20px;
+    color: #000;
+    text-align: center;
+}
+.form #signupform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+#signupform .input{
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 50px;
+    background-color: #eaf4f4;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+#signupform h3{
+    font-size: 1.5rem;
+    color: #ff9f1c;
+}
+#signupform span{
+    font-size: 0.9rem;
+    color: #000;
+}
+#signupform #btn{
+    background-color: #ff9f1c;
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#signupform #btn:hover{
+    background-color: #000;
+}
+#signupform span{
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style files/registerstyle.css">
+    <title>Register Form</title>
+</head>
+<body>
+    <div class="form">
+        <h1>Register User</h1>
+        <form action="" id="signupform">
+            <h3>Full Name</h3>
+            <input type="text" name="fname" placeholder="Enter your full name" class="input" id="fullname">
+            <span id="name-error"></span>
+            <h3>Email Address</h3>
+            <input type="text" name="email" placeholder="Enter your email" class="input" id="email">
+            <span id="email-error"></span>
+            <h3>Username</h3>
+            <input type="text" name="username" placeholder="Create username" class="input" id="username">
+            <span id="username-error"></span>
+            <h3>Create Password</h3>
+            <input type="password" name="cpass" placeholder="Enter password" class="input" id="pass">
+            <span id="pass-error"></span>
+            <br>
+            <span>Password must be 8 characters</span>
+            <h3>Confirm Password</h3>
+            <input type="password" placeholder="Re-enter password" class="input" id="cpass">
+            <span id="conpass-error"></span>
+            <br>
+            <input type="submit" value="Signup" id="btn">
+        </form>
+    </div>
+    <script src="js files/signup.js"></script>
+</body>
+</html>
