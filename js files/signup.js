@@ -44,7 +44,8 @@ function validateEmail(){
 function validateUser(){
     let username=document.getElementById('username').value.trim();
     if(username==""){
-        userError.innerHTML="Username cannot be empty"
+        userError.innerHTML="Username cannot be empty";
+        return false;
     }
     if(!isBetween(username.length,min,max)){
         userError.innerHTML="Username must be between 3 and 25 characters";
@@ -57,12 +58,15 @@ function validatePass(){
     let pass=document.getElementById('pass').value.trim();
     if(pass==""){
         passError.innerHTML="Password cannot be empty";
+        validpass.style.display="none";
+        return false;
     }
     if(!isPasswordSecure(pass)){
         passError.innerHTML="Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)";
+        validpass.style.display="none";
         return false;
     }
-    passError.style.display="none";
+    passError.innerHTML='<i class="fa-solid fa-circle-check"></i>';
     validpass.style.display="block";
     return true;
 }
