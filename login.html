@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style files/loginstyle.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="form">
+        <h1>Login</h1>
+        <form action="" id="loginform" >
+            <h3>Email Address</h3>
+            <input type="text" name="email" placeholder="Enter your email" class="input" id="email" autocomplete="off">
+            <h3>Username</h3>
+            <input type="text" name="username" placeholder="Create username" class="input" id="username" autocomplete="off">
+            <h3>Create Password</h3>
+            <input type="password" name="cpass" placeholder="Enter password" class="input" id="pass" autocomplete="off">
+            <br>
+            <input type="submit" value="Signup" id="btn" onclick="return validateForm()">
+            <span id="submit-error"></span>   
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script src="js files/login.js"></script>
+</body>
+</html>

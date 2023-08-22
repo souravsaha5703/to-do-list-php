@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,#edf6f9,#cbf3f0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    width: 600px;
+    height: 500px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px #cbf3f0;
+    align-items: center;
+    justify-self: center;
+}
+.form h1{
+    margin-top: 20px;
+    color: #000;
+    text-align: center;
+}
+.form #loginform{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 50px;
+    gap: 5px;
+}
+#loginform .input{
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 50px;
+    background-color: #eaf4f4;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+#loginform h3{
+    font-size: 1.5rem;
+    color: #2ec4b6;
+}
+#loginform #btn{
+    background-color: #2ec4b6;
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#loginform #btn:hover{
+    background-color: #ff9f1c;
+}
+#loginform span{
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+}
+#loginform .input:focus{
+    border: 2px solid #2ec4b6;
+}
+#loginform i{
+    color: seagreen;
+}
