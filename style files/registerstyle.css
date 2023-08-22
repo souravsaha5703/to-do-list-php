@@ -15,7 +15,7 @@ body{
 }
 .form{
     width: 600px;
-    height: 700px;
+    height: 750px;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -23,6 +23,8 @@ body{
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 1px 1px 10px #cbf3f0;
+    align-items: center;
+    justify-self: center;
 }
 .form h1{
     margin-top: 20px;
@@ -30,10 +32,12 @@ body{
     text-align: center;
 }
 .form #signupform{
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 20px;
+    padding-left: 50px;
 }
 #signupform .input{
     border: none;
@@ -47,10 +51,6 @@ body{
 #signupform h3{
     font-size: 1.5rem;
     color: #ff9f1c;
-}
-#signupform span{
-    font-size: 0.9rem;
-    color: #000;
 }
 #signupform #btn{
     background-color: #ff9f1c;
@@ -71,4 +71,14 @@ body{
     font-size: 14px;
     color: red;
     margin-top: 5px;
+}
+#signupform .input:focus{
+    border: 2px solid #2ec4b6;
+}
+#signupform i{
+    color: seagreen;
+}
+#signupform #validpass{
+    color: green;
+    display: none;
 }
