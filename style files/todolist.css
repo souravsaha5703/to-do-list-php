@@ -38,7 +38,8 @@ nav{
     list-style: none;
     align-items: center;
 }
-.main-nav ul li{
+.main-nav ul li a{
+    text-decoration: none;
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     color: #233d4d;
@@ -46,7 +47,7 @@ nav{
     font-weight: 600;
     transition: all 0.3s ease;
 }
-.main-nav ul li:hover{
+.main-nav ul li a:hover{
     color: #d62828;
 }
 .main-nav ul #logout{

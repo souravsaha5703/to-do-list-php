@@ -82,3 +82,12 @@ body{
     color: green;
     display: none;
 }
+.form p{
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.form p a{
+    text-decoration: none;
+    color: #2ec4b6;
+}

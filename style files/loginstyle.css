@@ -79,3 +79,11 @@ body{
 #loginform i{
     color: seagreen;
 }
+.form p{
+    font-size: 15px;
+}
+.form p a{
+    text-decoration: none;
+    color: #ff9f1c;
+    font-weight: 600;
+}

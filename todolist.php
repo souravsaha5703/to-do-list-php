@@ -19,24 +19,41 @@ if($_SESSION['userid']=="" || !isset($_SESSION['userid'])) {
         <div class="main-nav container">
             <img src="task icon.png" alt="">
             <ul>
-                <li>Home</li>
-                <li>Tasks</li>
+                <li><a href="todolist.php">Home</a></li>
+                <li><a href="#">Tasks</a></li>
                 <a href="logout.php" id="logout">Logout</a>
             </ul>
         </div>
     </nav>
     <div class="content container">
         <div class="heading">
-            <p>Hello User</p>
+            <p>Hello <?php
+            $us=$_SESSION['username'];
+            echo $us; 
+             ?></p>
         </div>
         <div class="input">
-            <form action="#" method="post">
+            <form action="addtask.php" method="post">
                 <input type="text" name="task" id="input-task" placeholder="Enter your task">
                 <input type="submit" value="Add Task" id="task-submit">
             </form>
         </div>
         <ul id="output-task">
-            <li class="checked">Task 1<span><i class="fa-solid fa-xmark"></i></span></li>
+            <?php
+            $connection=mysqli_connect("localhost","root","","tododb");
+            $user=$_SESSION['userid'];
+            $query="SELECT * from users_info WHERE id='$user'";
+            $res=$connection->query($query);
+            $row=$res->fetch_assoc();
+            $id=$row['id'];
+            $sel="SELECT * FROM list_table WHERE user_id='$id'";
+            $result=$connection->query($sel);
+            while($line=$result->fetch_assoc()){
+             ?>
+            <li><?php echo $line['task']; ?><span><a href="deletetask.php?task_id=<?php echo $line['task_id']; ?>"><i class="fa-solid fa-xmark"></i></a></span></li>
+            <?php
+            }
+            ?>
         </ul>
     </div>
     <script src="https://kit.fontawesome.com/e04331d407.js" crossorigin="anonymous"></script>
