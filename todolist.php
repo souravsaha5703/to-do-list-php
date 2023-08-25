@@ -18,11 +18,12 @@ if($_SESSION['userid']=="" || !isset($_SESSION['userid'])) {
     <nav>
         <div class="main-nav container">
             <img src="task icon.png" alt="">
-            <ul>
+            <ul id="links">
                 <li><a href="todolist.php">Home</a></li>
                 <li><a href="#">Tasks</a></li>
                 <a href="logout.php" id="logout">Logout</a>
             </ul>
+            <i class="fa-solid fa-bars" id="menu"></i>
         </div>
     </nav>
     <div class="content container">
@@ -57,6 +58,13 @@ if($_SESSION['userid']=="" || !isset($_SESSION['userid'])) {
         </ul>
     </div>
     <script src="https://kit.fontawesome.com/e04331d407.js" crossorigin="anonymous"></script>
+    <script>
+        const itag=document.getElementById("menu");
+        const links=document.getElementById("links");
+        itag.addEventListener('click',()=>{
+            links.classList.toggle('active');
+        })
+    </script>
 </body>
 
 </html>
