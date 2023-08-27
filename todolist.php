@@ -51,7 +51,7 @@ if($_SESSION['userid']=="" || !isset($_SESSION['userid'])) {
             $result=$connection->query($sel);
             while($line=$result->fetch_assoc()){
              ?>
-            <li><?php echo $line['task'];?><span id="del"><a href="deletetask.php?task_id=<?php echo $line['task_id']; ?>"><i class="fa-solid fa-xmark"></i></a></span><span id="edit"><a href="edittask.php?task_id=<?php echo $line['task_id']; ?>"><i class="fa-regular fa-pen-to-square"></a></span></li>
+            <li><?php echo $line['task'];?><span id="del"><a href="deletetask.php?task_id=<?php echo $line['task_id']; ?>"><i class="fa-solid fa-xmark"></i></a></span><span id="edit"><a href="edittask.php?task_id=<?php echo $line['task_id']; ?>"><i class="fa-regular fa-pen-to-square"></i></a></span></li>
             <?php
             }
             ?>
