@@ -27,35 +27,23 @@ if($_SESSION['userid']=="" || !isset($_SESSION['userid'])) {
         </div>
     </nav>
     <div class="content container">
-        <div class="heading">
-            <p>Hello <?php
-            $us=$_SESSION['username'];
-            echo $us; 
-             ?></p>
-        </div>
         <div class="input">
-            <form action="addtask.php" method="post">
-                <input type="text" name="task" id="input-task" placeholder="Enter your task">
-                <input type="submit" value="Add Task" id="task-submit">
-            </form>
-        </div>
-        <ul id="output-task">
             <?php
             $connection=mysqli_connect("localhost","root","","tododb");
-            $user=$_SESSION['userid'];
-            $query="SELECT * from users_info WHERE id='$user'";
-            $res=$connection->query($query);
-            $row=$res->fetch_assoc();
-            $id=$row['id'];
-            $sel="SELECT * FROM list_table WHERE user_id='$id'";
-            $result=$connection->query($sel);
-            while($line=$result->fetch_assoc()){
+            $edittask=$_GET['task_id'];
+            $select="SELECT * FROM list_table WHERE task_id='$edittask'";
+            $res=$connection->query($select);
+            while($line=$res->fetch_assoc()){
              ?>
-            <li><?php echo $line['task'];?><span id="del"><a href="deletetask.php?task_id=<?php echo $line['task_id']; ?>"><i class="fa-solid fa-xmark"></i></a></span><span id="edit"><a href="edittask.php?task_id=<?php echo $line['task_id']; ?>"><i class="fa-regular fa-pen-to-square"></a></span></li>
+            <form action="updatetask.php" method="post">
+                <input type="hidden" name="editid" value="<?php echo $line['task_id'] ?>">
+                <input type="text" name="task" id="input-task" placeholder="Enter your task" value="<?php echo $line['task']?>" >
+                <input type="submit" value="Add Task" id="task-submit">
+            </form>
             <?php
             }
             ?>
-        </ul>
+        </div>
     </div>
     <script src="https://kit.fontawesome.com/e04331d407.js" crossorigin="anonymous"></script>
     <script>

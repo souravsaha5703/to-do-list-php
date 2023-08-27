@@ -137,9 +137,21 @@ nav{
     left: 8px;
     top: 12px;
 }
-.content ul li span{
+.content ul li #del{
     position: absolute;
     right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+.content ul li #edit{
+    position: absolute;
+    right: 40px;
     top: 5px;
     width: 40px;
     height: 40px;
