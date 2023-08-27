@@ -168,7 +168,6 @@ nav{
 @media screen and (max-width:997px) {
 
     .main-nav {
-        width: 997px;
         padding-inline: 20px;
     }
 
@@ -176,8 +175,8 @@ nav{
         font-size: 1.2rem;
     }
 
-    .content {
-        width: 997px;
+    .content{
+        width: 100%;
     }
 
     .heading {
@@ -199,18 +198,24 @@ nav{
 }
 
 @media screen and (max-width:768px) {
-    .main-nav {
-        width: 768px;
+    .content{
+        width: 100%;
     }
-
-    .content {
-        width: 768px;
+}
+@media screen and (max-width:515px) {
+    .input{
+        width: 380px;
+    }
+    #input-task {
+        width: 200px;
+    }
+    #output-task{
+        width: 380px;
     }
 }
 
 @media screen and (max-width:425px) {
     .main-nav {
-        width: 425px;
         overflow: initial;
     }
     .main-nav img{
@@ -237,8 +242,8 @@ nav{
     ul.active{
         left: 0;
     }
-    .content {
-        width: 425px;
+    .content{
+        width: 100%;
     }
     .input{
         width: 400px;
@@ -250,12 +255,18 @@ nav{
         width: 400px;
     }
 }
-@media screen and (max-width:375px){
-    .main-nav{
-        width: 375px;
+@media screen and (max-width:405px) {
+    .input{
+        width: 350px;
     }
+    #output-task{
+        width: 350px;
+    }
+    
+}
+@media screen and (max-width:375px){
     .content{
-        width: 375px;
+        width: 100%;
     }
     .input{
         width: 350px;
@@ -272,11 +283,8 @@ nav{
     }
 }
 @media screen and (max-width:320px){
-    .main-nav{
-        width: 320px;
-    }
     .content{
-        width: 320px;
+        width: 100%;
     }
     .input{
         width: 300px;
