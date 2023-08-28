@@ -74,3 +74,14 @@ body{
 .buttons #signup:hover{
     background-color: #ff7b00;
 }
+@media screen and (max-width:425px) {
+    .name h1{
+        font-size: 4rem;
+    }
+    .name h4{
+        font-size: 2rem;
+    }
+    .name p{
+        font-size: 1rem;
+    }
+}
